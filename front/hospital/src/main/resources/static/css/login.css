@@ -1,0 +1,128 @@
+*{
+	margin: 0px;
+	height: 0px;
+}
+body{
+	
+ width: 100%;
+ height: 100%;
+ position: relative;
+}
+#back{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: url(../img/bacg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	z-index: -1;
+}
+
+#login_container{
+	width: 480px;
+	height: 380px;
+	border-radius: 14px;
+	background: #FFFFFF;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	
+}
+
+form  h2{
+	 font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    color: #fa9111;
+    padding: 40px 0;
+    text-align: left;
+}
+
+#sub_container{
+	width: 80%;
+	
+	margin: 0px auto;
+	position: relative;
+}
+#username_container{
+	width: 100%;
+	height: 46px;
+	
+	position: relative;
+	
+}
+.username{
+	width: 332px;
+	height: 24px;
+	border: 0px;
+	background: white;
+	outline: none;
+	margin: 1px;
+	padding: 10px 0px 10px 46px;
+	border: 1px solid #f1f1f1;
+	border-radius: 46px;
+}
+
+
+.user-icon{
+	width: 20px;
+	height: 20px;
+	background: url(../img/user.png) no-repeat center;
+	position: absolute;
+	left: 16px;
+    top :12px;
+	margin: 0 6px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#password_container{
+	width: 100%;
+	height: 46px;
+	
+	position: relative;
+	margin-top: 20px;
+	
+}
+._password{
+	width: 332px;
+	height: 24px;
+	border: 0px;
+	background: white;
+	outline: none;
+	margin: 1px;
+	padding: 10px 0px 10px 46px;
+	border: 1px solid #f1f1f1;
+	border-radius: 46px;
+}
+
+.password-icon{
+	width: 20px;
+	height: 20px;
+	background: url(../img/password.png) no-repeat center;
+	position: absolute;
+	left: 16px;
+    top :12px;
+	margin: 0 6px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.username_hover{
+	border: 1px solid #f08200;
+}
+
+input.submitbutton {
+    width: 100% !important;
+    height: 46px !important;
+    font-size: 20px !important;
+    border-radius: 100px !important;
+    background-color: #fa911e;
+    border: none !important;
+    margin-top: 30px;
+}
+input.submitbutton:hover{
+	background-color: #f08200;
+}

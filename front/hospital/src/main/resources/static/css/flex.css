@@ -1,0 +1,25 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+input,select{
+	width: 100%;
+	height: 40px;
+	margin: 0px auto;	
+	background-color: white;
+}
+
+/*父容器弹性布局*/
+#parent_div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+/**条目*/
+#parent_div>div{
+	width: 90%;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+
+

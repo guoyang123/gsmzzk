@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gsmzzk.mapper.BaseInfoMapper" >
+
+
+    <insert id="save" parameterType="com.gsmzzk.pojo.Baseinfo" >
+
+        insert into baseinfo ( hospitalname, hospitaltype,directorname,directorphone,
+        directoremail,messagername,messagerphone,messageremail,
+        ot_1,ot_2, ot_3, ot_4,ot_5,
+        nob_1, nob_2, nob_3,nob_4,
+        ana_fixed_doctor,ana_total_work,ana_per,ana_total_doctor,ana_aicu,
+        ana_pain,ana_other,ana_total,ana_nurse_total,ana_nurse_aicu,
+        ana_nurse_pain,ana_nurse_other,nurse_total,
+        create_time,update_time)
+        values (#{baseinfo.hospitalname,jdbcType=VARCHAR}, #{baseinfo.hospitaltype,jdbcType=VARCHAR},#{baseinfo.directorname,jdbcType=VARCHAR}, #{baseinfo.directorphone,jdbcType=VARCHAR},
+        #{baseinfo.directoremail,jdbcType=VARCHAR}, #{baseinfo.messagername,jdbcType=VARCHAR},#{baseinfo.messagerphone,jdbcType=VARCHAR}, #{baseinfo.messageremail,jdbcType=VARCHAR},
+        #{baseinfo.ot_1,jdbcType=VARCHAR}, #{baseinfo.ot_2,jdbcType=VARCHAR},#{baseinfo.ot_3,jdbcType=VARCHAR}, #{baseinfo.ot_4,jdbcType=VARCHAR},#{baseinfo.ot_5,jdbcType=VARCHAR},
+        #{baseinfo.nob_1,jdbcType=VARCHAR}, #{baseinfo.nob_2,jdbcType=VARCHAR},#{baseinfo.nob_3,jdbcType=VARCHAR}, #{baseinfo.nob_4,jdbcType=VARCHAR},
+        #{baseinfo.ana_fixed_doctor,jdbcType=VARCHAR}, #{baseinfo.ana_total_work,jdbcType=VARCHAR},#{baseinfo.ana_per,jdbcType=VARCHAR}, #{baseinfo.ana_total_doctor,jdbcType=VARCHAR},#{baseinfo.ana_aicu,jdbcType=VARCHAR},
+        #{baseinfo.ana_pain,jdbcType=VARCHAR}, #{baseinfo.ana_other,jdbcType=VARCHAR},#{baseinfo.ana_total,jdbcType=VARCHAR}, #{baseinfo.ana_nurse_total,jdbcType=VARCHAR},#{baseinfo.ana_nurse_aicu,jdbcType=VARCHAR},
+        #{baseinfo.ana_nurse_pain,jdbcType=VARCHAR}, #{baseinfo.ana_nurse_other,jdbcType=VARCHAR},#{baseinfo.nurse_total,jdbcType=VARCHAR},
+       now(),now())
+    </insert>
+
+    <select id="findByPage" parameterType="map" resultType="com.gsmzzk.pojo.Baseinfo">
+        select id, hospitalname, hospitaltype,directorname,directorphone,
+        directoremail,messagername,messagerphone,messageremail,
+        ot_1,ot_2, ot_3, ot_4,ot_5,
+        nob_1, nob_2, nob_3,nob_4,
+        ana_fixed_doctor,ana_total_work,ana_per,ana_total_doctor,ana_aicu,
+        ana_pain,ana_other,ana_total,ana_nurse_total,ana_nurse_aicu,
+        ana_nurse_pain,ana_nurse_other,nurse_total,
+        create_time,update_time
+        from baseinfo
+    </select>
+
+
+    <select id="findByIds" parameterType="list" resultType="com.gsmzzk.pojo.Baseinfo">
+        select id, hospitalname, hospitaltype,directorname,directorphone,
+        directoremail,messagername,messagerphone,messageremail,
+        ot_1,ot_2, ot_3, ot_4,ot_5,
+        nob_1, nob_2, nob_3,nob_4,
+        ana_fixed_doctor,ana_total_work,ana_per,ana_total_doctor,ana_aicu,
+        ana_pain,ana_other,ana_total,ana_nurse_total,ana_nurse_aicu,
+        ana_nurse_pain,ana_nurse_other,nurse_total,
+        create_time,update_time
+        from baseinfo
+        <where>
+            <if test="ids!=null and ids.size()>0">
+                id in
+                <foreach collection="ids" item="id" open="(" close=")" separator=",">
+                    #{id}
+                </foreach>
+        </if>
+        </where>
+
+    </select>
+</mapper>

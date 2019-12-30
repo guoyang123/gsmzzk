@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="utf-8" />
+		 <meta content="IE=dege,chrom=1" http-equiv="X-UA-Compatible">
+         <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+        <script type="text/javascript" th:src="@{/js/jquery-3.3.1.js}" ></script>
+        <script type="text/javascript" th:src="@{/js/bootstrap.min.js}" ></script>
+
+
+         <title></title>
+	</head>
+	<style>
+		body{
+			background-color: rgb(242,237,243);
+		}
+		fieldset{
+			border: 0px;
+		}
+		.raduisdiv{
+			background-color: #ffffff;
+			border-radius: 4px;
+			padding: 10px;
+			margin-top: 20px;
+		}
+		.container{
+			display: -webkit-flex;
+			flex-direction: column;
+			width: 96%;
+			justify-content:center; 
+			margin: 0px auto;
+		}
+		.form_container{
+			display: -webkit-flex;
+			flex-direction: column;
+		}
+		input{
+			width: 90%;
+			border: solid 1px #f1f1f1;
+			display: block;
+			height: 40px;
+		}
+
+	</style>
+	<body>
+		
+	
+	<div class="container">
+	
+	<h2 style="text-align: center; color: rgb(8,142,253);">2018年甘肃省麻醉质控中心医疗质量信息报表</h2>
+		<span>一般指标每半年上报一次(6月及12月)，质量指标每月上报一次。当月报表请于次月20日前上报</span>
+
+   <form class="form_container">
+       <!--<fieldset>-->
+           <legend><h2>用户信息</h2></legend>
+           <div class="raduisdiv">
+               <div style="margin-bottom: 10px;"><span>填表人姓名</span></div>
+               <div style="margin-bottom: 10px;"><input  id="username" /></div>
+               <div style="margin-bottom: 10px;"><span >单位名称</span></div>
+               <div style="margin-bottom: 10px;"><input  id="unitname"/></div>
+
+           </div>
+       <!--</fieldset>-->
+
+	   <!--<fieldset style="margin-top: 10px">-->
+		   <legend><h2>质量指标</h2></legend>
+
+		   <div>
+
+               <!--后来添加的-->
+
+
+               <div style="display: -webkit-flex;flex-direction: column;">
+				   <div class="raduisdiv">
+					   <h3>1.工作量及人员指标</h3>
+					   <h4>1.麻醉例(次)数</h4>
+                   <div>
+                       <div style="margin-bottom: 10px;"><span>①住院部手术室麻醉总数(例次)</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadCount"/></div>
+                   </div>
+
+                       <div style="margin-bottom: 10px;"><span>②按ASA分级(含急诊)统计</span></div>
+                       <div style="margin-bottom: 10px;"><span>麻醉总例次数</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsaCount"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅰ级</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa1"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅱ级</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa2"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅰ~Ⅱ级所占比例%</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa12Per"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅲ级</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa3"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅳ级</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa4"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅴ级</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa5"/></div>
+                       <div style="margin-bottom: 10px;"><span>Ⅲ~Ⅴ级所占比例%</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadRsa345Per"/></div>
+
+				   </div>
+                      <!-- <fieldset >-->
+                           <div class="raduisdiv">
+                           <legend><h4>E(急诊手术)</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>例次数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadEmergencyCount"/></div>
+                               <div style="margin-bottom: 10px;"><span>所占比例%</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadEmergencyPer"/></div>
+                           </div>
+						   </div>
+                       <!--</fieldset>-->
+
+
+                   <div style="display: -webkit-flex; flex-direction: column;">
+					   <div class="raduisdiv">
+                       <div>③按麻醉分类方法统计</div>
+                       <fieldset>
+                           <legend><h4>全身麻醉数</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>总数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadAnaCount"/></div>
+                               <div style="margin-bottom: 10px;"><span>吸入</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadAnaEnter"/></div>
+                               <div style="margin-bottom: 10px;"><span>静脉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadAnaStatic"/></div>
+                               <div style="margin-bottom: 10px;"><span>复合</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadAnaComplex"/></div>
+                           </div>
+                       </fieldset>
+					   </div>
+					   <div class="raduisdiv">
+                       <fieldset>
+                           <legend><h4>椎管内麻醉数</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>总数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadCanCount"/></div>
+                               <div style="margin-bottom: 10px;"><span>腰麻</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadCanWaist"/></div>
+                               <div style="margin-bottom: 10px;"><span>硬膜外</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadCanOut"/></div>
+                               <div style="margin-bottom: 10px;"><span>腰硬联合</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadCanUnit"/></div>
+                           </div>
+                       </fieldset>
+					   </div>
+					   <div class="raduisdiv">
+                       <fieldset>
+                           <legend><h4>神经干(丛)阻滞</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>总数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadNerveCount"/></div>
+                               <div style="margin-bottom: 10px;"><span>神经干</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadNerve"/></div>
+                               <div style="margin-bottom: 10px;"><span>神经丛</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadNervePlexus"/></div>
+                           </div>
+                       </fieldset>
+					   </div>
+					   <div class="raduisdiv">
+                       <fieldset>
+                           <legend><h4>其他</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>总数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadOtherCount"/></div>
+                               <div style="margin-bottom: 10px;"><span>MAC</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadOtherMac"/></div>
+                               <div style="margin-bottom: 10px;"><span>其他</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadOtherOther"/></div>
+                           </div>
+                       </fieldset>
+					   </div>
+                   </div>
+                   <div style="display: -webkit-flex;flex-direction: column;">
+					   <div class="raduisdiv">
+					   <div>④按专科麻醉分类统计</div>
+                       <fieldset>
+                           <legend><h4>专科麻醉数</h4></legend>
+                           <div style="display: -webkit-flex; flex-direction: column;">
+                               <div style="margin-bottom: 10px;"><span>脑外科麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyBrain"/></div>
+                               <div style="margin-bottom: 10px;"><span>胸外科麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyChest"/></div>
+                               <div style="margin-bottom: 10px;"><span>心血管外科麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyCardiovascular"/></div>
+                               <div style="margin-bottom: 10px;"><span>产科麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyObstetrics"/></div>
+                               <div style="margin-bottom: 10px;"><span>小儿麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyChild"/></div>
+                               <div style="margin-bottom: 10px;"><span>老年麻醉</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadSpecialtyOld"/></div>
+                           </div>
+                       </fieldset>
+					   </div>
+
+					   <div class="raduisdiv">
+					   <div><span>无痛内窥镜深度镇静、麻醉数(例次)</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadSpecialtyNopain"/></div>
+                       <div><span>日间(门诊)手术室麻醉数(含介入手术治疗，次数)</span></div>
+                       <div style="margin-bottom: 10px;"><input id="workloadSpecialtyDay"/></div>
+					   </div>
+
+                       <!--<fieldset >-->
+
+                           <div style="display: -webkit-flex; flex-direction: column;">
+							   <div class="raduisdiv">
+							   <legend><h4>无痛分娩及无痛人流数(例次)</h4></legend>
+                               <div style="margin-bottom: 10px;"><span>总数</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadPainlessCount"/></div>
+							   </div>
+
+							   <div class="raduisdiv">
+                               <div style="margin-bottom: 10px;"><span>日间(门诊)手术麻醉</span></div>
+                               <fieldset>
+                                   <legend><h4>有创或无创检查</h4></legend>
+                                   <div style="margin-bottom: 10px;"><span>胃肠道</span></div>
+                                   <div style="margin-bottom: 10px;"><input id="workloadInvasiveTract"/></div>
+                                   <div style="margin-bottom: 10px;"><span>呼吸系统</span></div>
+                                   <div style="margin-bottom: 10px;"><input id="workloadInvasiveBreathing"/></div>
+                                   <div style="margin-bottom: 10px;"><span>心血管</span></div>
+                                   <div style="margin-bottom: 10px;"><input id="workloadInvasiveHealth"/></div>
+                               </fieldset>
+							   </div>
+							   <div class="raduisdiv">
+                               <div style="margin-bottom: 10px;"><span>介入手术治疗</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadInvasiveOperation"/></div>
+                               <div style="margin-bottom: 10px;"><span>人流手术</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadInvasiveStream"/></div>
+                               <div style="margin-bottom: 10px;"><span>分娩镇痛</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadInvasiveChildbirth"/></div>
+                               <div style="margin-bottom: 10px;"><span>其他</span></div>
+                               <div style="margin-bottom: 10px;"><input id="workloadInvasiveOther"/></div>
+							   </div>
+                           </div>
+                       <!--</fieldset>-->
+                   </div>
+               </div>
+               <h4>2.收住或诊治病人数(例次)</h4>
+			   <div class="raduisdiv">
+               <fieldset>
+                   <legend>收住或诊治病人数（例次）</legend>
+                   <div style="margin-bottom: 10px;"><span>PACU</span></div>
+                   <div style="margin-bottom: 10px;"><input id="livePacu"/></div>
+                   <div style="margin-bottom: 10px;"><span>AICU</span></div>
+                   <div style="margin-bottom: 10px;"><input id="liveAicu"/></div>
+                   <div style="margin-bottom: 10px;"><span>疼痛病房</span></div>
+                   <div style="margin-bottom: 10px;"><input id="livePain"/></div>
+               </fieldset>
+			   </div>
+               <!--结束-->
+			   <div class="raduisdiv">
+			   <div><span>2.麻醉成功率(%)</span></div>
+			   <fieldset>
+				   <legend>(1)神经干（丛）阻滞成功率</legend>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNerveTrunkCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNerveTrunkSuccess"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNerveTrunkPer"/></div>
+			   </fieldset>
+			   <fieldset>
+				   <legend>(2)硬膜外阻滞成功率</legend>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveBlockCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveBlockSucess"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveBlockPer"/></div>
+			   </fieldset>
+			   <fieldset>
+				   <legend>(3)困难气道处理成功率</legend>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDifficultyCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDifficultySucess"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDifficultyPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>3.超声引导穿刺（限深静脉、硬膜外及神经丛穿刺）覆盖率(%)</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>同期总例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveUltrasonicCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>应用超声引导例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveUltrasonicCount2"/></div>
+				   <div style="margin-bottom: 10px;"><span>成功率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveUltrasonicPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>4.麻醉开始后手术取消率（只报例数，汇总后统计%）</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>麻醉开始后手术取消例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnaesthesiaCancelCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnaesthesiaCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>取消率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnaesthesiaCancelPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>5.非计划二次气管插管率（只报例数，汇总后统计%）</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>非计划二次气管插管例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveNoplainCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveNoplainTotalCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>非计划二次气管插管率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveNoplainPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>6.PACU入室低体温率（%）</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>PACU入室低体温例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="livePacuCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期PACU入室测量体温患者总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="livePacuTotalCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>低体温率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="livePacuPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>7.非计划转入ICU率（%）</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>非计划转入ICU例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveIcuCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveIcuTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>非计划转入ICU率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveIcuPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>8.全麻气管插管拔管后声音嘶哑发生率（%）</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>插管拔管后声音嘶哑例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveGeneralCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveGeneralTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>插管拔管后声音嘶哑率</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveGeneralPer"/></div>
+			   </div>
+			   </div>
+
+			   <div class="raduisdiv">
+			   <div><span>9.麻醉开始后24小时内死亡率</span></div>
+
+			   <fieldset>
+				   <legend>麻醉开始后24小时内死亡率</legend>
+				   <div style="margin-bottom: 10px;"><span>麻醉开始后24小时内死亡例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>麻醉开始后24小时内死亡率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadPer"/></div>
+			   </fieldset>
+			   </div>
+
+			   <div class="raduisdiv">
+			   <div><span>10.麻醉严重并发症发生率及/或抢救成功率</span></div>
+
+			   <fieldset>
+				   <legend>⑴麻醉开始后24小时内心跳骤停发生例数及抢救成功例数</legend>
+				   <div style="margin-bottom: 10px;"><span>发生例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadSuccessCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadSuccessMazuiCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadSucessStartPer"/></div>
+				   <div style="margin-bottom: 10px;"><span>抢救成功例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadSucessTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>抢救成功率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveDeadSucessPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(2)麻醉期间严重过敏反应发生例数及抢救成功例数</legend>
+				   <div style="margin-bottom: 10px;"><span>严重过敏反应例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveAllergySuccessCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveAllergySuccessMazuiCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveAllergySucessStartPer"/></div>
+				   <div style="margin-bottom: 10px;"><span>抢救成功例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveAllergySucessTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>抢救成功率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveAllergySucessPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(3)椎管内麻醉后严重神经并发症发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>发生例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期椎管内麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(4)深静脉穿刺严重并发症发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>严重并发症例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveVeinCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期操作总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveVeinTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveVeinPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>⑸麻醉后监测治疗室（PACU）转出延迟率</legend>
+				   <div style="margin-bottom: 10px;"><span>入PACU超过3小时患者数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralPacuCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期入PACU总数(无PACU请添同期麻醉总数)</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralPacuTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveNeuralPacuStartPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(6)全麻术中知晓发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>发生例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveGeneralAnesthesiaCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期全麻例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveGeneralAnesthesiaTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveGeneralAnesthesiaPer"/></div>
+			   </fieldset>
+			   </div>
+
+			   <div class="raduisdiv">
+			   <div><span>11.术中自体血回输率(%)</span></div>
+
+			   <fieldset>
+				   <legend>自体血回输例数</legend>
+				   <div style="margin-bottom: 10px;"><span>回输例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveBloodCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>回输总量ml</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveBloodTotalcount"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <div style="margin-bottom: 10px;"><span>同期输血病人总数</span></div>
+			   <div style="margin-bottom: 10px;"><input id="liveBloodPeopleCount"/></div>
+			   <div style="margin-bottom: 10px;"><span>回输率%</span></div>
+			   <div style="margin-bottom: 10px;"><input id="liveBloodPer"/></div>
+			   </div>
+
+			   <div class="raduisdiv">
+			   <div><span>12.术后镇痛率(%)</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>镇痛例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnalgesiaCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnalgesiaTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>术后镇痛率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveAnalgesiaPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>13.麻醉后随访率(%)</span></div>
+			   <div style="display: -webkit-flex; flex-direction: column;">
+				   <div style="margin-bottom: 10px;"><span>随访记录例数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveFollowCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveFollowTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>随访率%</span></div>
+				   <div  style="margin-bottom: 10px;"><input id="liveFollowPer"/></div>
+			   </div>
+			   </div>
+			   <div class="raduisdiv">
+			   <div><span>14.术后严重并发症发生率</span></div>
+
+			   <fieldset>
+				   <legend>⑴手术后24小时心肌梗塞发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>心梗例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveMyocardialCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveMyocardialTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveMyocardialPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>⑵手术后24小时新发昏迷发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>昏迷例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveComaCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveComaTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveComaPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>⑶手术后24小时肺栓塞发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>肺栓塞例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveLungCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveLungTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveLungPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(4)手术后24小时心跳骤停发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>心跳骤停例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveHeartCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期麻醉总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveHeartTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveHeartPer"/></div>
+			   </fieldset>
+			   </div>
+			   <div class="raduisdiv">
+			   <fieldset>
+				   <legend>(5)手术后24小时死亡发生例数</legend>
+				   <div style="margin-bottom: 10px;"><span>死亡例数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveOperationDeadCount"/></div>
+				   <div style="margin-bottom: 10px;"><span>同期全麻总数</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveOperationDeadTotalcount"/></div>
+				   <div style="margin-bottom: 10px;"><span>发生率%</span></div>
+				   <div style="margin-bottom: 10px;"><input id="liveOperationDeadPer"/></div>
+			   </fieldset>
+				   <div style="display: -webkit-flex; flex-direction: row;">
+
+					   <div style="flex-grow: 1;text-align: center">
+						   <button id="submit" onsubmit="return false" type="button" class="btn btn-primary">提交</button>
+					   </div>
+				   </div>
+
+			   </div>
+
+
+		   </div>
+	   <!--</fieldset>-->
+
+</form>
+
+<script>
+
+    $(function () {
+        $("#next").click(function () {
+
+        });
+        $("#submit").click(function () {
+            //  window.location.href="front2.html";
+
+            $.ajax({
+                url:"",
+                type:"post",
+                data:{
+                    username:$("#username").val() ,
+                    unitname:$("#unitname").val() ,
+                    workloadCount:$("#workloadCount").val() ,
+                    workloadRsaCount:$("#workloadRsaCount").val() ,
+                    workloadRsa1:$("#workloadRsa1").val() ,
+                    workloadRsa2:$("#workloadRsa2").val() ,
+                    workloadRsa12Per:$("#workloadRsa12Per").val() ,
+                    workloadRsa3:$("#workloadRsa3").val() ,
+                    workloadRsa4:$("#workloadRsa4").val() ,
+                    workloadRsa5:$("#workloadRsa5").val() ,
+                    workloadRsa345Per:$("#workloadRsa345Per").val() ,
+
+                    workloadEmergencyCount:$("#workloadEmergencyCount").val() ,
+                    workloadEmergencyPer:$("#workloadEmergencyPer").val() ,
+                    workloadAnaCount:$("#workloadAnaCount").val() ,
+                    workloadAnaEnter:$("#workloadAnaEnter").val() ,
+                    workloadAnaStatic:$("#workloadAnaStatic").val() ,
+                    workloadAnaComplex:$("#workloadAnaComplex").val() ,
+                    workloadCanCount:$("#workloadCanCount").val() ,
+                    workloadCanWaist:$("#workloadCanWaist").val() ,
+                    workloadCanOut:$("#workloadCanOut").val() ,
+                    workloadCanUnit:$("#workloadCanUnit").val() ,
+                    workloadNerveCount:$("#workloadNerveCount").val() ,
+                    workloadNerve:$("#workloadNerve").val() ,
+                    workloadNervePlexus:$("#workloadNervePlexus").val() ,
+                    workloadOtherCount:$("#workloadOtherCount").val() ,
+                    workloadOtherMac:$("#workloadOtherMac").val() ,
+                    workloadOtherOther:$("#workloadOtherOther").val() ,
+                    workloadSpecialtyBrain:$("#workloadSpecialtyBrain").val() ,
+                    workloadSpecialtyChest:$("#workloadSpecialtyChest").val() ,
+                    workloadSpecialtyCardiovascular:$("#workloadSpecialtyCardiovascular").val() ,
+                     workloadSpecialtyObstetrics:$("#workloadSpecialtyObstetrics").val() ,
+                    workloadSpecialtyChild:$("#workloadSpecialtyChild").val() ,
+
+
+                    workloadSpecialtyOld:$("#workloadSpecialtyOld").val() ,
+                    workloadSpecialtyNopain:$("#workloadSpecialtyNopain").val() ,
+                    workloadSpecialtyDay:$("#workloadSpecialtyDay").val() ,
+                    workloadPainlessCount:$("#workloadPainlessCount").val() ,
+                    workloadInvasiveTract:$("#workloadInvasiveTract").val() ,
+                    workloadInvasiveBreathing:$("#workloadInvasiveBreathing").val() ,
+                    workloadInvasiveHealth:$("#workloadInvasiveHealth").val() ,
+                    workloadInvasiveOperation:$("#workloadInvasiveOperation").val() ,
+                    workloadInvasiveStream:$("#workloadInvasiveStream").val() ,
+                    workloadInvasiveChildbirth:$("#workloadInvasiveChildbirth").val() ,
+                    workloadInvasiveOther:$("#workloadInvasiveOther").val() ,
+                    livePacu:$("#livePacu").val() ,
+                    liveAicu:$("#liveAicu").val() ,
+                    livePain:$("#livePain").val() ,
+                    liveNerveTrunkCount:$("#liveNerveTrunkCount").val() ,
+                    liveNerveTrunkSuccess:$("#liveNerveTrunkSuccess").val() ,
+                    liveNerveTrunkPer:$("#liveNerveTrunkPer").val() ,
+                    liveBlockCount:$("#liveBlockCount").val() ,
+                    liveBlockSucess:$("#liveBlockSucess").val() ,
+                    liveBlockPer:$("#liveBlockPer").val() ,
+                    liveDifficultyCount:$("#liveDifficultyCount").val() ,
+                    liveDifficultySucess:$("#liveDifficultySucess").val() ,
+                    liveDifficultyPer:$("#liveDifficultyPer").val() ,
+                    liveUltrasonicCount:$("#liveUltrasonicCount").val() ,
+                    liveUltrasonicCount2:$("#liveUltrasonicCount2").val() ,
+                    liveUltrasonicPer:$("#liveUltrasonicPer").val() ,
+                    liveAnaesthesiaCancelCount:$("#liveAnaesthesiaCancelCount").val() ,
+                    liveAnaesthesiaCount:$("#liveAnaesthesiaCount").val() ,
+                    liveAnaesthesiaCancelPer:$("#liveAnaesthesiaCancelPer").val() ,
+                    liveNoplainCount:$("#liveNoplainCount").val() ,
+                    liveNoplainTotalCount:$("#liveNoplainTotalCount").val() ,
+                    liveNoplainPer:$("#liveNoplainPer").val() ,
+                    livePacuCount:$("#livePacuCount").val() ,
+                    livePacuTotalCount:$("#livePacuTotalCount").val() ,
+
+
+
+
+
+
+                    livePacuPer:$("#livePacuPer").val() ,
+                    liveIcuCount:$("#liveIcuCount").val() ,
+                    liveIcuTotalcount:$("#liveIcuTotalcount").val() ,
+                    liveIcuPer:$("#liveIcuPer").val() ,
+                    liveGeneralCount:$("#liveGeneralCount").val() ,
+                    liveGeneralTotalcount:$("#liveGeneralTotalcount").val() ,
+                    liveGeneralPer:$("#liveGeneralPer").val() ,
+                    liveDeadCount:$("#liveDeadCount").val() ,
+                    liveDeadTotalcount:$("#liveDeadTotalcount").val() ,
+                    liveDeadPer:$("#liveDeadPer").val() ,
+                    liveDeadSuccessCount:$("#liveDeadSuccessCount").val() ,
+                    liveDeadSuccessMazuiCount:$("#liveDeadSuccessMazuiCount").val() ,
+                    liveDeadSucessStartPer:$("#liveDeadSucessStartPer").val() ,
+                    liveDeadSucessTotalcount:$("#liveDeadSucessTotalcount").val() ,
+                    liveDeadSucessPer:$("#liveDeadSucessPer").val() ,
+                    liveAllergySuccessCount:$("#liveAllergySuccessCount").val() ,
+                    liveAllergySuccessMazuiCount:$("#liveAllergySuccessMazuiCount").val() ,
+                    liveAllergySucessStartPer:$("#liveAllergySucessStartPer").val() ,
+                    liveAllergySucessTotalcount:$("#liveAllergySucessTotalcount").val() ,
+                    liveAllergySucessPer:$("#liveAllergySucessPer").val() ,
+                    liveNeuralCount:$("#liveNeuralCount").val() ,
+                    liveNeuralTotalcount:$("#liveNeuralTotalcount").val() ,
+                    liveNeuralPer:$("#liveNeuralPer").val() ,
+                    liveVeinCount:$("#liveVeinCount").val() ,
+
+
+
+                    liveVeinTotalcount:$("#liveVeinTotalcount").val() ,
+                    liveVeinPer:$("#liveVeinPer").val() ,
+                    liveNeuralPacuCount:$("#liveNeuralPacuCount").val() ,
+                    liveNeuralPacuTotalcount:$("#liveNeuralPacuTotalcount").val() ,
+                    liveNeuralPacuStartPer:$("#liveNeuralPacuStartPer").val() ,
+                    liveGeneralAnesthesiaCount:$("#liveGeneralAnesthesiaCount").val() ,
+                    liveGeneralAnesthesiaTotalcount:$("#liveGeneralAnesthesiaTotalcount").val() ,
+                    liveGeneralAnesthesiaPer:$("#liveGeneralAnesthesiaPer").val() ,
+                    liveBloodCount:$("#liveBloodCount").val() ,
+                    liveBloodTotalcount:$("#liveBloodTotalcount").val() ,
+                    liveBloodPeopleCount:$("#liveBloodPeopleCount").val() ,
+                    liveBloodPer:$("#liveBloodPer").val() ,
+                    liveAnalgesiaCount:$("#liveAnalgesiaCount").val() ,
+                    liveAnalgesiaTotalcount:$("#liveAnalgesiaTotalcount").val() ,
+                    liveAnalgesiaPer:$("#liveAnalgesiaPer").val() ,
+                    liveFollowCount:$("#liveFollowCount").val() ,
+                    liveFollowTotalcount:$("#liveFollowTotalcount").val() ,
+                    liveFollowPer:$("#liveFollowPer").val() ,
+                    liveMyocardialCount:$("#liveMyocardialCount").val() ,
+                    liveMyocardialTotalcount:$("#liveMyocardialTotalcount").val() ,
+                    liveMyocardialPer:$("#liveMyocardialPer").val() ,
+                    liveComaCount:$("#liveComaCount").val() ,
+                    liveComaTotalcount:$("#liveComaTotalcount").val() ,
+                    liveComaPer:$("#liveComaPer").val() ,
+                    liveLungCount:$("#liveLungCount").val() ,
+                    liveLungTotalcount:$("#liveLungTotalcount").val() ,
+                    liveLungPer:$("#liveLungPer").val() ,
+                    liveHeartCount:$("#liveHeartCount").val() ,
+                    liveHeartTotalcount:$("#liveHeartTotalcount").val() ,
+                    liveHeartPer:$("#liveHeartPer").val() ,
+                    liveOperationDeadCount:$("#liveOperationDeadCount").val() ,
+                    liveOperationDeadTotalcount:$("#liveOperationDeadTotalcount").val() ,
+                    liveOperationDeadPer:$("#liveOperationDeadPer").val()
+                },
+                dataType:"json",
+                success:function(res){
+                    console.log(res)
+                    alert(res.msg)
+                },
+
+
+            })
+
+
+
+
+        });
+    });
+</script>
+
+
+</div>
+
+
+	</body>
+</html>
